@@ -7,18 +7,18 @@ class Main extends React.Component{
         return(
             <div>
               
-              <HornedBeast title={'The First Animal'}  />
+              <HornedBeast title={'UniWhal'}  />
              
-             <HornedBeast  imageUrl={'https://a-z-animals.com/media/2021/01/mammals-400x300.jpg' } alt={'jungle '} />
+             <HornedBeast  imageUrl={'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg' } alt={'jungle '} />
              <h3>
-             <HornedBeast descreption={'animals'} />
+             <HornedBeast descreption={'A unicorn and a narwhal nuzzling their horns'} />
            </h3> 
            <h2>
-              <HornedBeast title={'The Second Animal'}  />
+              <HornedBeast title={'Rhino Family'}  />
              </h2> 
-            <HornedBeast  imageUrl={'https://media.wired.com/photos/593261cab8eb31692072f129/master/w_2560%2Cc_limit/85120553.jpg' } alt={'cuteee'}/>
+            <HornedBeast  imageUrl={'https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80' } alt={'cuteee'}/>
              <h3>
-             <HornedBeast descreption={'animals'} />
+             <HornedBeast descreption={'Mother (or father) rhino with two babies'} />
            </h3> 
            </div> 
         )
