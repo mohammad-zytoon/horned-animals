@@ -1,25 +1,24 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import hornsData from './hornsData.json';
-import {CardColumns} from 'react-bootstrap';
+import { CardColumns } from 'react-bootstrap';
 
 
 class Main extends React.Component {
   render() {
     return (
       <CardColumns>
-      <div>
-        {hornsData.map(item => {
-          return (
-            <HornedBeast
-              title={item.title}
-              imageUrl={item.image_url}
-              description={item.description}
-            />
-          )
-        })}
+        <div>
+          {this.props.hornsData.map(item => {
+            return (
+              <HornedBeast
+                title={item.title}
+                imageUrl={item.image_url}
+                description={item.description}
+              />
+            )
+          })}
 
-      </div>
+        </div>
       </CardColumns>
     )
   }
@@ -27,7 +26,7 @@ class Main extends React.Component {
 export default Main;
 
 // {/* <HornedBeast title={'UniWhal'}  />
-             
+
 //              <HornedBeast  imageUrl={'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg' } alt={'jungle '} />
 //              <h3>
 //              <HornedBeast descreption={'A unicorn and a narwhal nuzzling their horns'} />
