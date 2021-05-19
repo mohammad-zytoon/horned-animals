@@ -4,6 +4,9 @@ import { CardColumns } from 'react-bootstrap';
 
 
 class Main extends React.Component {
+ constructor(props){
+   super(props)
+ }
   render() {
     return (
       <CardColumns>
