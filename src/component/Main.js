@@ -1,19 +1,43 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
 import { CardColumns } from 'react-bootstrap';
-
+import Formbos from './Form'
 
 class Main extends React.Component {
- constructor(props){
-   super(props)
- }
+  constructor(props) {
+    super(props)
+    this.state = {
+      filteredArr: this.props.hornsData
+    }
+  }
+  filteredHorns = (value) => {
+    let result = [];
+    if (value !== 'all') {
+      result = this.props.hornsData.filter((item) => {
+        if (item.horns == value) 
+          return item;
+        
+      })
+    } else {
+
+      result = this.props.hornsData;
+    }
+    this.setState({
+      filteredArr: result,
+    })
+  }
   render() {
     return (
+      <div>
+      <Formbos
+      filteredHorns={this.filteredHorns}
+  />
       <CardColumns>
-        <div>
-          {this.props.hornsData.map(item => {
+        
+          {this.state.filteredArr.map((item,index)=> {
             return (
               <HornedBeast
+              key={index}
                 title={item.title}
                 imageUrl={item.image_url}
                 description={item.description}
@@ -21,8 +45,9 @@ class Main extends React.Component {
             )
           })}
 
-        </div>
+       
       </CardColumns>
+      </div>
     )
   }
 }
